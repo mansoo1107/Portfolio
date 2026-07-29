@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FuYan · Portfolio</title>
+<meta name="description" content="FuYan的个人作品集">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 整张地图：横向长卷，Mae 陪你从左跑到右 -->
+<div id="map">
+
+  <!-- 第一段：夜晚森林（可互动） -->
+  <section class="panel" id="hero">
+    <div class="moon"></div>
+    <div class="stars"></div>
+    <div class="hills"></div>
+    <div class="ground"></div>
+    <div class="obj" id="obj-neon" data-x="760">
+      <span class="sign">FUYAN'S WORLD</span>
+      <span class="pole"></span>
+    </div>
+    <div class="obj" id="obj-fire" data-x="1300">
+      <span class="flames"><i></i><i></i><i></i></span>
+      <span class="logs"></span>
+    </div>
+    <div class="obj" id="obj-star" data-x="1750">
+      <span class="star-bit">✦</span>
+      <span class="pond"></span>
+    </div>
+    <div class="obj" id="obj-door" data-x="2180">
+      <span class="frame"></span>
+    </div>
+    <div class="hero-title">
+      <p class="hi">HI，我是 MAE</p>
+      <h1>FUYAN <em>的森林</em></h1>
+      <p class="sub">一本可以玩的作品集</p>
+    </div>
+  </section>
+
+  <!-- 黎明：走出森林 -->
+  <section class="panel dawn"></section>
+
+  <!-- 7 个作品板块由 JS 渲染到这里（display:contents，子元素直接参与横向排列） -->
+  <div id="project-list"></div>
+
+  <!-- 手绘 / 水彩画廊 -->
+  <section class="panel paper alt" id="gallery">
+    <h2 class="sec-title">她的手绘</h2>
+    <p class="bubble"><b>Mae 说</b>走过的地方，她都画了下来。</p>
+    <div id="gallery-list" class="collage"></div>
+  </section>
+
+  <!-- 便签墙（留言板） -->
+  <section class="panel night" id="board">
+    <h2 class="sec-title light">便签墙</h2>
+    <div id="notes-wall"></div>
+    <form id="note-form">
+      <input name="name" maxlength="12" placeholder="称呼" required>
+      <textarea name="message" rows="3" maxlength="200" placeholder="想说的话…" required></textarea>
+      <button type="submit">寄出</button>
+      <p class="form-tip">便签经她精选后上墙～</p>
+    </form>
+  </section>
+
+  <!-- 关于 -->
+  <section class="panel paper" id="about">
+    <div class="about-wrap reveal">
+      <div class="about-left">
+        <h2 class="sec-title">关于她</h2>
+        <p class="about-name">FU YAN</p>
+        <p class="about-tag" id="about-tag"></p>
+      </div>
+      <div id="skills"></div>
+    </div>
+  </section>
+
+  <!-- 终点 -->
+  <footer class="panel night" id="end">
+    <p>Mae 为本人手绘二创，致敬《林中之夜》。</p>
+    <p>© FUYAN · Vibe Coding with AI</p>
+    <a class="back-home" href="#hero">↩ 回到森林入口</a>
+  </footer>
+
+</div>
+
+<!-- 固定在屏幕上的元素 -->
+<div id="mae"><div class="mae-in"></div></div>
+<div id="say" hidden></div>
+<p id="game-help">滚轮 / ← → 陪我跑地图 · 发光的可以点</p>
+
+<nav id="nav">
+  <a href="#p-lintong">作品</a>
+  <a href="#gallery">手绘</a>
+  <a href="#board">便签墙</a>
+  <a href="#about">关于</a>
+  <a id="pdf-link" target="_blank" rel="noopener">全部作品 ↗</a>
+</nav>
+
+<div id="lightbox" hidden><img alt="放大"></div>
+
+<script src="js/content.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

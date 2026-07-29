@@ -1,0 +1,13 @@
+# 大文件与本地素材，不进网站仓库
+排版.indd
+个人作品集(1).pdf
+pdf_text.txt
+Portfoliofile/
+# 内部文档（含专业信息，不公网）
+PRD.md
+# 开发中间产物（截图/DOM 转储/字符清单/核对图）
+tools/_*
+# 字体原始文件（商业字体不进公开仓库，只发布子集 woff2）
+assets/fonts/HYG3GJM.ttf
+Thumbs.db
+.DS_Store
