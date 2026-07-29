@@ -3,6 +3,9 @@
 一本「可以玩」的个人作品集：首页是 Mae 的夜晚森林小游戏，往下滚走出森林，进入作品与水彩画廊。
 静态站点（纯 HTML/CSS/JS，无构建、无后端），部署在 GitHub Pages。
 
+https://mansoo1107.github.io/Portfolio/
+个人作品集网站链接
+
 ## 目录结构
 
 ```
